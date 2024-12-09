@@ -1,5 +1,7 @@
 ## **Sample API for Embeddable Interface**
 
+This sample API demonstrates how the ARVgo Server and JingPin Server can interact to provide an embeddable interface.
+
 ### **Starting Server**
 - `npm install` 
 - `npm start`
@@ -29,3 +31,6 @@ The Get Shopping Menu API return the embeddable HTML document interface using `<
 The src URL will dynamically embed the menu specific to the provided machine_id.  
 
 Note: The client application is only responsible for embedding this interface.
+
+**Demo**:  
+[Embeddable Interface Demo](https://heinminhtun1999.github.io/embeddable-interface/)
