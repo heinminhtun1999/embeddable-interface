@@ -8,11 +8,11 @@
 
 **Get Menu**
 
-**API Name**: Get Menu
-**API URL**: serverURL/getMenu
-**Method**: GET
+**API Name**: Get Menu  
+**API URL**: serverURL/getMenu  
+**Method**: GET  
 
-**Purpose**:
+**Purpose**:  
 The Get Menu API generates an embeddable HTML document interface for shopping menu, which can be directly integrated into web pages and applications, allowing consumers to select the items.
 
 **Request Example**:
