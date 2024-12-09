@@ -1,3 +1,0 @@
-[submodule "API Server"]
-	path = API Server
-	url = https://git.heroku.com/embeddable-interface-test.git
