@@ -16,14 +16,14 @@
 The Get Menu API generates an embeddable HTML document interface for shopping menu, which can be directly integrated into web pages and applications, allowing consumers to select the items.
 
 **Request Example**:  
-{
-"machine_id": 1
-}
+{  
+"machine_id": 1  
+}  
 
 **Response**:  
 The Get Shopping Menu API return the embeddable HTML document interface using `<iframe>`.
 
-**Example Response**: 
+**Example Response**:   
 `<iframe src="http://127.0.0.1:3000/embed.js?machine_id=1" width="600" height="600"></iframe>`
 
 The src URL will dynamically embed the menu specific to the provided machine_id.  
