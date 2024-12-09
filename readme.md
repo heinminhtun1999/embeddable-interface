@@ -18,8 +18,8 @@ To run the demo, you need the following installed on your system:
 **Get Menu**
 
 **API Name**: Get Menu  
-**API URL**: `serverURL/getMenu`  
-**Method**: `GET ` 
+**API URL**: `[serverURL](https://embeddable-interface-test-243e558348f9.herokuapp.com/)/getMenu`  
+**Method**: `POST ` 
 
 **Purpose**:  
 The Get Menu API generates an embeddable HTML document interface for shopping menu, which can be directly integrated into web pages and applications, allowing consumers to select the items.
