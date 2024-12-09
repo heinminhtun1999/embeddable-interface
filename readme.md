@@ -3,6 +3,7 @@
 This sample API demonstrates how the ARVgo Server and JingPin Server can interact to provide an embeddable interface.
 
 ### **Starting Server**
+- `cd API Server`
 - `npm install` 
 - `npm start`
 
