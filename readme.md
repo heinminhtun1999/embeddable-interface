@@ -7,6 +7,11 @@ This sample API demonstrates how the ARVgo Server and JingPin Server can interac
 - `npm install` 
 - `npm start`
 
+**Prerequisites:**
+To run the demo, you need the following installed on your system:
+1. **Node.js** (LTS version recommended): [Download Node.js](https://nodejs.org/)
+2. **npm**: Comes bundled with Node.js.
+
 ### **APIs**
 
 **Get Menu**
