@@ -33,7 +33,7 @@ The Get Menu API generates an embeddable HTML document interface for shopping me
 The Get Shopping Menu API return the embeddable HTML document interface using `<iframe>`.
 
 **Example Response**:   
-`<iframe src="http://127.0.0.1:3000/embed.js?machine_id=1" width="600" height="600"></iframe>`
+`<iframe src="https://embeddable-interface-test-243e558348f9.herokuapp.com/embed.js?machine_id=1" width="600" height="600"></iframe>`
 
 The src URL will dynamically embed the menu specific to the provided machine_id.  
 
