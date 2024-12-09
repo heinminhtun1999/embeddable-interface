@@ -1,9 +1,9 @@
 
-##### **Starting Server**
+### **Starting Server**
 - `npm install` 
 - `npm start`
 
-##### **APIs**
+### **APIs**
 
 **Get Menu**
 
