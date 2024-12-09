@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/output.css">
+</head>
+<body class="bg-neutral-200 text-slate-600">
+    <div class="w-full h-full p-3">
+        <h1 class="text-xl text-center">JingPin</h1>
+        <% if (locals.menu) { %>
+            <div class="grid grid-cols-3 grid-rows-2 justify-center gap-3 m-5">
+                <% locals.menu.forEach(item => { %>
+                    <div class="w-[160px] h-[200px] text-white bg-stone-400 rounded hover:shadow-[0_0_6px_1px_#484B6A] transition-all duration-150">
+                        <img src="<%= item.image %>" alt="" class="w-full h-1/2 object-cover rounded-t">
+                        <div class="p-3">
+                            <h2 class="text-xs text-center"><%= item.title %></h2>        
+                            <p class="text-center">Price: $<%= item.price %></p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+         
+    </div>
+</body>
+</html>

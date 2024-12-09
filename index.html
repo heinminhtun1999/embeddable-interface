@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARVgo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/f2eac0dbd1.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="w-lvw h-lvh overflow-auto">
+    <h1 class="text-5xl text-center bg-red-600 text-white p-5">ARVgo</h1>
+    <div class="flex justify-center gap-3 m-5">
+        <form onsubmit="handleSubmit(this, event)">
+            <input type="hidden" name="machine_id" value="1">
+            <button type="submit" class="p-3 bg-slate-800 rounded text-white hover:shadow-[0_0_6px_1px_#484B6A] transition-all duration-150">Machine 1</button>
+        </form>
+        <form onsubmit="handleSubmit(this, event)">
+            <input type="hidden" name="machine_id" value="2">
+            <button type="submit" class="p-3 bg-slate-800 rounded text-white hover:shadow-[0_0_6px_1px_#484B6A] transition-all duration-150">Machine 2</button>
+        </form>
+        <form onsubmit="handleSubmit(this, event)">
+            <input type="hidden" name="machine_id" value="3">
+            <button type="submit" class="p-3 bg-slate-800 rounded text-white hover:shadow-[0_0_6px_1px_#484B6A] transition-all duration-150">Machine 3</button>
+        </form>
+        <form onsubmit="handleSubmit(this, event)">
+            <input type="hidden" name="machine_id" value="4">
+            <button type="submit" class="p-3 bg-slate-800 rounded text-white hover:shadow-[0_0_6px_1px_#484B6A] transition-all duration-150">Machine 4</button>
+        </form>
+    </div>
+    <div class="w-full h-full fixed top-0 left-0 flex justify-center items-center opacity-0 transition-all duration-150 -z-10" id="interface-overlay">
+        
+        <div class="w-full h-full absolute top-0 left-0 bg-gray-950/30 z-50" id="interface-backgrond"></div>
+    </div>
+
+</body>
+<script>
+    const interface = document.getElementById("interface-overlay");
+    const interfaceBackground = document.getElementById("interface-backgrond");
+
+    interfaceBackground.addEventListener("click", () => {
+        interface.classList.add("opacity-0", "-z-10");
+        interface.querySelector("#menu-interface").remove("");
+    })
+
+    function handleSubmit(form, e) {
+
+        e.preventDefault();
+        const machine_id = form.machine_id.value;
+
+        fetch("http://127.0.0.1:3000/getMenu", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ machine_id })
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            interface.classList.remove("opacity-0", "-z-10");
+            const div = document.createElement("div");
+            div.classList.add("z-50", "relative")
+            div.id = "menu-interface";
+
+            const icon = document.createElement("i");
+            icon.classList.add("fa-solid", "fa-xmark", "cursor-pointer", "absolute", "right-3", "top-3");
+            icon.addEventListener("click", () => {
+                interface.classList.add("opacity-0", "-z-10");
+                interface.querySelector("#menu-interface").remove("");
+            });
+            div.innerHTML += data.interface;
+            div.appendChild(icon);
+            interface.appendChild(div);
+        })
+    }
+</script>
+</html>
