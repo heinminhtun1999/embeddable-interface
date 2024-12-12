@@ -19,7 +19,7 @@ To run the demo, you need the following installed on your system:
 
 **API Name**: Get Menu  
 **API URL**: `https://embeddable-interface-test-243e558348f9.herokuapp.com/getMenuURL`  
-**Method**: `POST ` 
+**Method**: `POST` 
 
 **Purpose**:  
 This API generates a URL based on the provided machine_id. The generated URL can be embedded into an HTML document to display a shopping menu interface. It serves as a validation mechanism to ensure the machine ID corresponds to the appropriate menu.
