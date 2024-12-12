@@ -18,11 +18,11 @@ To run the demo, you need the following installed on your system:
 **Get Menu**
 
 **API Name**: Get Menu  
-**API URL**: `https://embeddable-interface-test-243e558348f9.herokuapp.com/getMenu`  
+**API URL**: `https://embeddable-interface-test-243e558348f9.herokuapp.com/getMenuURL`  
 **Method**: `POST ` 
 
 **Purpose**:  
-The Get Menu API generates an embeddable HTML document interface for shopping menu, which can be directly integrated into web pages and applications, allowing consumers to select the items.
+This API generates a URL based on the provided machine_id. The generated URL can be embedded into an HTML document to display a shopping menu interface. It serves as a validation mechanism to ensure the machine ID corresponds to the appropriate menu.
 
 **Request Example**:  
 {    
@@ -30,14 +30,18 @@ The Get Menu API generates an embeddable HTML document interface for shopping me
 }
 
 **Response**:  
-The Get Shopping Menu API return the embeddable HTML document interface using `<iframe>`.
+interfaceURL: A URL that can be embedded into an HTML document to render the menu.
 
 **Example Response**:   
-`<iframe src="https://embeddable-interface-test-243e558348f9.herokuapp.com/embed.js?machine_id=1" width="600" height="600"></iframe>`
+{  
+  "interfaceURL": "https://embeddable-interface-test243e558348f9.herokuapp.com/menu?machine_id=1"    
+}   
 
-The src URL will dynamically embed the menu specific to the provided machine_id.  
+Note:  
+ [-] The client application is only responsible for embedding this interface.
+ [-] machine_id is just for demonstration purposes. Developers should adjust the parameters to include additional security checks or authorization mechanisms.
 
-Note: The client application is only responsible for embedding this interface.
+
 
 **Demo**:  
 [Embeddable Interface Demo](https://heinminhtun1999.github.io/embeddable-interface/)
