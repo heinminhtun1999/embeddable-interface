@@ -38,8 +38,8 @@ interfaceURL: A URL that can be embedded into an HTML document to render the men
 }   
 
 Note:  
- [-] The client application is only responsible for embedding this interface.
- [-] machine_id is just for demonstration purposes. Developers should adjust the parameters to include additional security checks or authorization mechanisms.
+ - The client application is only responsible for embedding this interface.
+ -  machine_id is just for demonstration purposes. Developers should adjust the parameters to include additional security checks or authorization mechanisms.
 
 
 
