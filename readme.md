@@ -34,7 +34,7 @@ interfaceURL: A URL that can be embedded into an HTML document to render the men
 
 **Example Response**:   
 {  
-  "interfaceURL": "https://embeddable-interface.onrender.com//menu?machine_id=1"    
+  "interfaceURL": "https://embeddable-interface.onrender.com/menu?machine_id=1"    
 }   
 
 Note:  
