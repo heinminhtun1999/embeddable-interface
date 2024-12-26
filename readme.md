@@ -18,7 +18,7 @@ To run the demo, you need the following installed on your system:
 **Get Menu**
 
 **API Name**: Get Menu  
-**API URL**: `https://embeddable-interface.onrender.com//getMenuURL`  
+**API URL**: `https://embeddable-interface.onrender.com/getMenuURL`  
 **Method**: `POST` 
 
 **Purpose**:  
