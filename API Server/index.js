@@ -6,7 +6,7 @@ const { getData } = require("./dummy.js");
 
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://embeddable-interface-test-243e558348f9.herokuapp.com/"
+    ? "https://embeddable-interface.onrender.com/"
     : "http://127.0.0.1:3000/";
 
 let data = null;
